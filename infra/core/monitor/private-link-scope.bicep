@@ -1,6 +1,8 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 param privateLinkScopeName string
 param privateLinkScopedResources array = []
-
 param queryAccessMode string = 'Open'
 param ingestionAccessMode string = 'PrivateOnly'
 
@@ -25,4 +27,5 @@ resource scopedResources 'microsoft.insights/privateLinkScopes/scopedResources@2
   }
 ]
 
-output privateLinkScopeId string = privateLinkScope.id
+output name string = privateLinkScope.name
+output id string = privateLinkScope.id
